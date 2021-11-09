@@ -1,49 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Pokedex</title>
   </head>
   <body>
     <header>
-      <h1>Pokedex</h1>
+      <div class="wrapper">
+        <h1>Pokedex</h1>
+      </div>
     </header>
-    <main>
-      <section class="hero">
-        <h2>BULBASAUR</h2>
-        <img class="pokemon-hero" src="./img/001.png" alt="Bulbasaur" />
-      </section>
-      <section class="info">
-        <ul class="info__feature">
-          <li class="info_title">
-            <h3 class="info__title">No.</h3>
-            <h2 class="info__stat">asd</span>
-          </li>
-          <li class="info_title">
-            <h3 class="info__title">Level</h3>
-            <h2 class="info__stat">asd</h2>
-          </li>
-          <li class="info_title">
-            <h3 class="info__title">Type</h3>
-            <h2 class="info__stat">asd</h2>
-          </li>
-          <li class="info_title">
-            <h3 class="info__title">Hability</h3>
-            <h2 class="info__stat">asd</h2>
-          </li>
-          <li class="info_title">
-            <h3 class="info__title">Height</h3>
-            <h2 class="info__stat">Halo</h2>
-          </li>
-          <li class="info_title">
-            <h3 class="info__title">Weight</h3>
-            <h2 class="info__stat">asd</h2>
-          </li>
-        </ul>
-      </section>
-    </main>
+    <div class="wrapper">
+      <main>
+        <section class="hero">
+          <div class="hero_title">
+            <img
+              class="hero__icon"
+              src="./img/grass.png"
+              alt="Icono de planta de color verde"
+            />
+            <h2>Bulbasaur</h2>
+          </div>
+          <img class="pokemon-hero" src="./img/001.png" alt="Bulbasaur" />
+        </section>
+        <section class="info">
+          <ul class="info__feature">
+            <li class="info_title">
+              <h3 class="info__title">No.</h3>
+              <h3 class="info__stat">001</h3>
+            </li>
+            <li class="info_title">
+              <h3 class="info__title">Level</h3>
+              <h3 class="info__stat">20</h3>
+            </li>
+            <li class="info_title">
+              <h3 class="info__title">Type</h3>
+              <h3 class="info__stat">Plant</h3>
+            </li>
+            <li class="info_title">
+              <h3 class="info__title">Hability</h3>
+              <h3 class="info__stat">Thickness</h3>
+            </li>
+            <li class="info_title">
+              <h3 class="info__title">Height</h3>
+              <h3 class="info__stat">0.7m</h3>
+            </li>
+            <li class="info_title">
+              <h3 class="info__title">Weight</h3>
+              <h3 class="info__stat">6.9 Kg</h3>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer">
+        <h3>Others</h3>
+        <div class="container">
+          <div class="container__item">
+            <img src="./img/Clefairy.png" alt="Pokemón Clefaity" />
+          </div>
+          <div class="container__item">
+            <img src="./img/Nidorina.png" alt="Pokemón Nidorina" />
+          </div>
+          <div class="container__item">
+            <img src="./img/Pidgeotto.png" alt="Pokemón Pidgeotto" />
+          </div>
+          <div class="container__item">
+            <img src="./img/Squirtle.png" alt="Pokemón Squirtle" />
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

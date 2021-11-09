@@ -1,6 +1,8 @@
 :root {
   --colorFont: #e9bf3e;
-  --colorCard: #353d65;
+  --colorCard: #343d65;
+  --background: #2a3050;
+  --colorSecondaryFont: #dadbe2;
 }
 
 * {
@@ -14,13 +16,22 @@ html {
 }
 
 body {
-  background-color: #2a3050;
+  background-color: var(--background);
   color: var(--colorFont);
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  max-inline-size: 1100px;
+  padding-inline-end: 2rem;
+  padding-inline-start: 2rem;
+  margin: auto;
 }
 
 header {
-  padding: 1.5rem;
   background-color: var(--colorCard);
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
 }
 
 header h1 {
@@ -35,6 +46,23 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hero__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.hero_title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  background-color: var(--colorFont);
+  color: var(--background);
+  padding-block: 0.2rem;
+  padding-inline: 2rem;
+  border-radius: 25rem;
 }
 
 .pokemon-hero {
@@ -56,30 +84,67 @@ main {
 .info {
   display: flex;
   justify-content: center;
-  font-size: 1.6rem;
 }
 
 .info_title {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-}
-
-.info li {
   list-style: none;
+  font-weight: 400;
 }
 
+.info__title {
+  color: var(--colorSecondaryFont);
+  font-size: 1.5rem;
+}
+
+.info__stat {
+  font-size: 1.8rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.footer h3 {
+  text-align: center;
+  padding-block: 2rem;
+  font-size: 2rem;
+}
+
+.container__item {
+  background-color: var(--colorCard);
+  width: 13rem;
+  height: 13rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1.4rem;
+}
+
+.container div img {
+  width: 10rem;
+  padding: 1rem;
+}
 @media screen and (min-width: 768px) {
   main {
+    height: 100vh;
     display: flex;
     align-items: center;
     gap: 3rem;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .pokemon-hero {
     min-width: 40rem;
-    transform: translateY(5rem);
+  }
+
+  .info {
+    width: 100%;
+    justify-content: flex-end;
   }
 
   .info__feature {
@@ -89,7 +154,7 @@ main {
     height: 45rem;
     min-width: 30rem;
     max-width: 40rem;
-    width: 80%;
+    width: 100%;
     border-radius: 2rem;
   }
 
@@ -97,5 +162,41 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer h3 {
+    font-size: 3rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-end: 5rem;
+  }
+
+  .container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+  }
+
+  .container__item {
+    background-color: var(--colorCard);
+    width: 20%;
+    max-width: 20rem;
+    min-width: 13rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .container__item:hover {
+    background-color: var(--colorFont);
+    transform: scale(1.1);
+    cursor:pointer;
+  }
+  .container div img {
+    width: 13rem;
+    padding: 1rem;
   }
 }

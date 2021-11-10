@@ -193,7 +193,7 @@ main {
   .container__item:hover {
     background-color: var(--colorFont);
     transform: scale(1.1);
-    cursor:pointer;
+    cursor: pointer;
   }
   .container div img {
     width: 13rem;
